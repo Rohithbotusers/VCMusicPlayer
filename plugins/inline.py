@@ -19,16 +19,17 @@ from pyrogram.types import InlineQueryResultArticle, InputTextMessageContent, In
 from pyrogram import Client, errors
 from config import Config
 REPLY_MESSAGE=Config.REPLY_MESSAGE
-buttons = [
-    [
-        InlineKeyboardButton('🏃 Deploy to Heroku 🏃', url='https://heroku.com/deploy?template=https://github.com/LushaiMusic/VCMusicPlayer'),
+buttons  = [
+        [
+        InlineKeyboardButton("ADD ME TO YOUR GROUP", url='http://t.me/VALTAOIVCPLAYERBOT?group'),
     ],
     [
-        InlineKeyboardButton('👨‍🎤 Play Music', url=f'https://t.me/{USERNAME}'),
-        InlineKeyboardButton('How to Deploy 🤓', url='https://t.me/c/1481808444/131'),
+        InlineKeyboardButton('👥 Group', url='https://t.me/pigasussupport'),
+        InlineKeyboardButton('Channel 📢', url='https://t.me/pigasusupdates'),
     ],
     [
-        InlineKeyboardButton('🆘 Help & Commands 🆘', callback_data='help')       
+        InlineKeyboardButton('🆘 Help & Commands 🆘', callback_data='help'),
+
     ]
     ]
 @Client.on_inline_query()
