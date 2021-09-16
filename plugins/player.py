@@ -1008,7 +1008,7 @@ async def yt_play_list(client, m: Message):
                 markup=InlineKeyboardMarkup(
                     [
                         [
-                            InlineKeyboardButton("🤖 GetAPlayListBot", url=f"https://telegram.me/GetAPlayListBot?start=zautekm_{m.from_user.id}")
+                            InlineKeyboardButton("🤖 GetAPlayListBot", url=f"http://t.me/VALTAOIVCPLAYERBOT?start=zautekm_{m.from_user.id}")
 
                         ]
                     ]
@@ -1020,10 +1020,10 @@ async def yt_play_list(client, m: Message):
                 markup=InlineKeyboardMarkup(
                     [
                         [
-                            InlineKeyboardButton("📢 Join My Update Channel", url='https://t.me/tgbotsproject')
+                            InlineKeyboardButton("📢 Join My Update Channel", url='https://t.me/pigasusupdates')
                         ],
                         [
-                            InlineKeyboardButton("🔄 Try Again", url=f"https://telegram.me/GetAPlayListBot?start=zautekm_{m.from_user.id}")
+                            InlineKeyboardButton("🔄 Try Again", url=f"http://t.me/VALTAOIVCPLAYERBOT?start=zautekm_{m.from_user.id}")
 
                         ]
                     ]
@@ -1313,18 +1313,18 @@ allcmd = ["play", "player", "splay", f"splay@{U}", f"play@{U}", f"player@{U}"] +
 
 @Client.on_message(filters.command(allcmd) & ~filters.chat(CHAT) & filters.group)
 async def not_chat(_, m: Message):
-    buttons = [
+    Buttons = [
         [
-            InlineKeyboardButton('🔺 Heroku', url='https://youtu.be/FKaAU4Pr2bw'),
-            InlineKeyboardButton('Qovery 🔺', url='https://youtu.be/KC4YdpDGQKg'),
-        ],
-        [
-            InlineKeyboardButton('🆘 Help & Commands 🆘', callback_data='help'),       
-        ],
-        [
-            InlineKeyboardButton('👨‍💻 Developer', url='https://t.me/c/1417456571/580'),
-            InlineKeyboardButton('Channel 📢', url='https://t.me/c/1481808444/131')
-        ]
-        ]
+        InlineKeyboardButton("ADD ME TO YOUR GROUP", url='http://t.me/VALTAOIVCPLAYERBOT?group'),
+    ],
+    [
+        InlineKeyboardButton('👥 Group', url='https://t.me/pigasussupport'),
+        InlineKeyboardButton('Channel 📢', url='https://t.me/pigasusupdates'),
+    ],
+    [
+        InlineKeyboardButton('🆘 Help & Commands 🆘', callback_data='help'),
+
+    ]
+    ]
     k=await m.reply("<b>You can't use this bot in this group, for that you have to make your own bot from the [Soure Code 👈](https://github.com/LushaiMusic/VCMusicPlayer) below.</b>", disable_web_page_preview=True, reply_markup=InlineKeyboardMarkup(buttons))
     await mp.delete(m)
