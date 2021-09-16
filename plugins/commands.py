@@ -62,11 +62,11 @@ HELP = """
 async def start(client, message):
     buttons = [
         [
-        InlineKeyboardButton("🔥 Source Code 🔥", url='https://github.com/LushaiMusic/VCMusicPlayer'),
+        InlineKeyboardButton("ADD ME TO YOUR GROUP", url='http://t.me/VALTAOIVCPLAYERBOT?group'),
     ],
     [
-        InlineKeyboardButton('👥 Group', url='https://t.me/iZaute/5'),
-        InlineKeyboardButton('Channel 📢', url='https://t.me/iZaute/6'),
+        InlineKeyboardButton('👥 Group', url='https://t.me/pigasussupport'),
+        InlineKeyboardButton('Channel 📢', url='https://t.me/pigasusupdates'),
     ],
     [
         InlineKeyboardButton('🆘 Help & Commands 🆘', callback_data='help'),
@@ -83,16 +83,16 @@ async def start(client, message):
 async def show_help(client, message):
     buttons = [
         [
-            InlineKeyboardButton("🔥 Source Code 🔥", url='https://github.com/LushaiMusic/VCMusicPlayer'),
-        ],
-        [
-            InlineKeyboardButton('👥 Group', url='https://t.me/iZaute/5'),
-            InlineKeyboardButton('Channel 📢', url='https://t.me/iZaute/6'),
-        ],
-        [
-            InlineKeyboardButton('🔰 How to Deploy 🔰', url='https://t.me/c/1481808444/131'),
-        
-        ]
+        InlineKeyboardButton("ADD ME TO YOUR GROUP", url='http://t.me/VALTAOIVCPLAYERBOT?group'),
+    ],
+    [
+        InlineKeyboardButton('👥 Group', url='https://t.me/pigasussupport'),
+        InlineKeyboardButton('Channel 📢', url='https://t.me/pigasusupdates'),
+    ],
+    [
+        InlineKeyboardButton('🆘 Help & Commands 🆘', callback_data='help'),
+
+    ]
     ]
     reply_markup = InlineKeyboardMarkup(buttons)
     await message.reply_text(
@@ -100,7 +100,7 @@ async def show_help(client, message):
         reply_markup=reply_markup
         )
     await message.delete()
-@Client.on_message(filters.command(["restart", f"restart@{U}"]) & filters.user(Config.ADMINS))
+@Client.on_message(filters.command(["restart", f"restart@crimsonflashs"]) & filters.user(Config.ADMINS))
 async def restart(client, message):
     await message.reply_text("🔄 Restarting...")
     await message.delete()
